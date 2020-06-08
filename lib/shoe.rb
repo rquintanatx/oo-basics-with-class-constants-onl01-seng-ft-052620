@@ -7,9 +7,8 @@ class Shoe
   def initialize(brand)
     @brand = brand
     
-    if BRANDS.none? do |saved_brand|
-      if brand == saved_brand
-      end 
+    if BRANDS.none? {|saved_brand| saved_brand == brand}
+      BRANDS << brand
     end
     
   end
